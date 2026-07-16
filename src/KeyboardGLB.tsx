@@ -17,8 +17,8 @@ export function KeyboardGLB({ ...props }) {
       //
       if (it.isLight) {
         it.position.y =
-          Math.cos(i / 4 + time * 1.0) *
-          Math.cos(i / 4 + Math.PI * 0.25 + time * 1.0) *
+          Math.cos(i / 4 + time * 2.5) *
+          Math.cos(i / 4 + Math.PI * 0.25 + time * 2.5) *
           1.5;
 
         it.intensity =
