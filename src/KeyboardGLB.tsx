@@ -9,7 +9,7 @@ export function KeyboardGLB({ ...props }) {
   ) as any;
 
   const ref = useRef<Scene>(null);
-  useFrame((st, dt) => {
+  useFrame((st, _dt) => {
     let time = st.clock.getElapsedTime();
     let i = 0;
     let sceneItem = ref?.current as Scene;
