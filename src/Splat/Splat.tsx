@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GSMesh, PlyLoader } from "three-gsmesh";
+import { GSMesh, PlyLoader, SpzLoader } from "three-gsmesh";
 // import { SplatLoader } from "@sparkjsdev/spark";
 // import { Matrix3, Vector3, Quaternion, Matrix4 } from "three";
 
@@ -81,13 +81,15 @@ export function Splat() {
       //   });
       //   console.log(sogData);
 
+      //   const spzLoader = new SpzLoader();
+      //   const rawData = await spzLoader.loadAsync(`/splat/fullscene.spz`);
+
       const splatLoader = new PlyLoader();
-      const data = await splatLoader.loadAsync(
+      const rawData = await splatLoader.loadAsync(
         "/splat/plyloader.compressed.ply",
       );
-      console.log("goodformat", data);
 
-      const gsmesh = new GSMesh(data, {
+      const gsmesh = new GSMesh(rawData, {
         //
       });
       gsmesh.quaternion.set(1, 0, 0, 0);
