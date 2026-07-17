@@ -16,11 +16,6 @@ export function KeyboardGLB({ ...props }) {
     sceneItem?.traverse((it: any) => {
       //
       if (it.isLight) {
-        it.position.y =
-          Math.cos(i / 4 + time * 2.5) *
-          Math.cos(i / 4 + Math.PI * 0.25 + time * 2.5) *
-          1.5;
-
         it.intensity =
           (Math.sin(i / 4 + time * 1.0) *
             Math.cos(i / 4 + Math.PI * 0.25 + time * 1.0) *
@@ -44,25 +39,25 @@ export function KeyboardGLB({ ...props }) {
     <group ref={ref} {...props} name={"keyboard"} dispose={null}>
       <group>
         <pointLight
-          intensity={3.37}
+          intensity={2}
           decay={2}
           color="#007bff"
           position={[0.1749, 0.1905, -0.4258]}
         />
         <pointLight
-          intensity={3.37}
+          intensity={2}
           decay={2}
           color="#29ff2c"
           position={[-0.2717, 0.1905, 0.2412]}
         />
         <pointLight
-          intensity={3.37}
+          intensity={2}
           decay={2}
           color="#ff0000"
           position={[-0.236, 0.1905, -0.4009]}
         />
         <pointLight
-          intensity={3.37}
+          intensity={2}
           decay={2}
           color="#ff00a2"
           position={[0.1936, 0.1905, 0.0297]}
